@@ -113,6 +113,10 @@
         border: none;
       }
     </style>
+    <script>
+      func = async () => await page.evaluate(() => document.fonts.ready);
+      func();
+    </script>
   </head>
 
   <body>
