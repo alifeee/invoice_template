@@ -195,7 +195,7 @@
         <tr>
           <th>Item</th>
           <th>Time (hours)</th>
-          <th>Price</th>
+          <th>Price ({{ currency_symbol }})</th>
         </tr>
         {{#items}}
         <tr>
