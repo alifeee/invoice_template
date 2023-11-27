@@ -52,11 +52,19 @@
       }
       header .date {
         font-size: 0.8em;
-        color: #999;
+        color: #aaa;
       }
       header .amount {
         font-size: 2em;
         font-weight: bold;
+      }
+      header .bank-info .transfer {
+        font-size: 0.8em;
+        color: #aaa;
+      }
+      header .bank-reference .info {
+        font-size: 0.8em;
+        color: #aaa;
       }
 
       main {
@@ -82,7 +90,7 @@
       .contact-info th {
         text-align: left;
         font-size: 0.8em;
-        color: #999;
+        color: #aaa;
       }
       .contact-info td {
         padding: 0.5rem;
@@ -97,7 +105,7 @@
       .items th {
         text-align: left;
         font-size: 0.8em;
-        color: #999;
+        color: #aaa;
       }
       .items td {
         padding: 0.5rem;
@@ -138,6 +146,14 @@
           due_date
         }}</time
         >)
+      </span>
+      <span class="bank-info">
+        <span class="transfer">via bank transfer to</span>
+        <span class="bank">{{ from.bank }}</span>
+      </span>
+      <span class="bank-reference">
+        <span class="info">with reference</span>
+        <span class="reference">invoice_{{ id }}</span>
       </span>
     </header>
     <main>
