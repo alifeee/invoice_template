@@ -1,6 +1,28 @@
 # Invoice Template
 
-Template for making an invoice. Outputs HTML and PDF.
+Template for making an invoice. Outputs HTML and PDF. Uses TOML for information, e.g.,
+
+```toml
+id = "001"
+amount = "300"
+issue_date = "2023-11-30"
+due_date = "2023-12-30"
+
+[from]
+name = "alifeee"
+
+[to]
+name = "Garibaldi"
+
+[[items]]
+title = "Biscuit Generation"
+time_h = "1.5"
+charge = "150"
+
+...
+```
+
+...creates...
 
 ![Screenshot of PDF invoice, filled in with example data.](images/invoice.png)
 
