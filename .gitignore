@@ -1,0 +1,8 @@
+# python
+/env
+
+# secrets
+invoice.toml
+
+# build files
+/build

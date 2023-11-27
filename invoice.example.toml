@@ -1,0 +1,12 @@
+[invoice]
+id = "001"
+customer = "Garibaldi"
+amount = "£100"
+issue_date = "2023-11-30"
+due_date = "2023-12-30"
+description = "Snack generation"
+
+[invoice.me]
+name = "alifeee"
+address = "123 Fake Street, Sheffield, S8 4GF"
+email = "alifeee@alifeee.co.uk"

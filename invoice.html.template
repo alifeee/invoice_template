@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Invoice {{ id }}</title>
+
+    <style>
+      header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>INVOICE #{{ id }} - {{#upper}}{{ from.name }}{{/upper}}</h1>
+      <span class="generated date">
+        generated <time>{{ issue_date }}</time>
+      </span>
+      <span class="due date">
+        due <time>{{ due_date }}</time>
+      </span>
+      <span class="amount">
+        <span class="currency">{{ currency }}</span>
+        <span class="currency_symbol">{{ currency_symbol }}</span
+        ><span class="value">{{ amount }}</span>
+      </span>
+    </header>
+    <main>
+      <table class="contact-info">
+        <tr>
+          <th>From</th>
+          <th>To</th>
+        </tr>
+        <tr class="name">
+          <td>{{ from.name }}</td>
+          <td>{{ to.name }}</td>
+        </tr>
+        <tr class="email">
+          <td>{{ from.email }}</td>
+          <td>{{ to.email }}</td>
+        </tr>
+        <tr class="address">
+          <td>{{ from.address }}</td>
+          <td>{{ to.address }}</td>
+        </tr>
+      </table>
+      <table class="items">
+        <tr>
+          <th>Item</th>
+          <th>Time (h)</th>
+          <th>Price</th>
+        </tr>
+        {{#items}}
+        <tr>
+          <td>
+            <a href="{{ url }}">{{ title }}</a>
+          </td>
+          <td>{{ time_h }}</td>
+          <td>{{ charge }}</td>
+        </tr>
+        {{/items}}
+      </table>
+    </main>
+  </body>
+</html>
