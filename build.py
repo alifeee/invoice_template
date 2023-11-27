@@ -53,17 +53,22 @@ def save_html(html: str, output_path: str):
     """Save html"""
     with open(output_path, "w", encoding="utf-8") as file:
         file.write(html)
+    # copy /static to build
+    static_path = "static"
+    if os.path.exists(static_path):
+        os.system(f"cp -r {static_path} {OUTPUT_FOLDER}")
     print(f"🚀 Built html! The html is in {output_path}")
 
 
-def save_pdf(html: str, output_path: str):
+def save_pdf(html_fpath: str, output_path: str):
     """Make pdf from html"""
     print("🔧 Building pdf...")
+    # open browser on html_file
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
-        page.set_content(html)
-        page.pdf(path=output_path)
+        page.goto(f"file://{html_fpath}")
+        page.pdf(path=output_path, format="a4")
         browser.close()
     print(f"🚀 Built pdf! The pdf is in {output_path}")
 
@@ -83,7 +88,8 @@ def main():
         os.makedirs(OUTPUT_FOLDER)
 
     save_html(html, html_output_path)
-    save_pdf(html, pdf_output_path)
+    html_path = os.path.abspath(html_output_path)
+    save_pdf(html_path, pdf_output_path)
 
 
 class EventHandler(FileSystemEventHandler):
