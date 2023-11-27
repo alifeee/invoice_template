@@ -170,7 +170,8 @@
         {{#items}}
         <tr>
           <td>
-            <a href="{{ url }}">{{ title }}</a>
+            {{ title }} {{#url}}<a href="{{ url }}" target="_blank"> ⇗</a
+            >{{/url}}
           </td>
           <td>{{ time_h }}</td>
           <td>{{ charge }}</td>
