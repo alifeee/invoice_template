@@ -169,8 +169,12 @@
           <td>{{ to.name }}</td>
         </tr>
         <tr class="email">
-          <td>{{ from.email }}</td>
-          <td>{{ to.email }}</td>
+          <td>
+            <a href="mailto:{{ from.email }}">{{ from.email }}</a>
+          </td>
+          <td>
+            <a href="mailto:{{ to.email }}">{{ to.email }}</a>
+          </td>
         </tr>
         <tr class="address">
           <td>{{ from.address }}</td>
