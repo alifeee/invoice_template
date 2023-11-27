@@ -6,7 +6,6 @@ currency_symbol = "£"
 amount = "300"
 issue_date = "2023-11-30"
 due_date = "2023-12-30"
-description = "Generation of Biscuits"
 
 [from]
 name = "alifeee"
