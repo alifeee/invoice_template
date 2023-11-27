@@ -111,6 +111,15 @@
       .items td {
         padding: 0.5rem;
       }
+      .items .description {
+        width: 60%;
+      }
+      .items .time_h {
+        width: 20%;
+      }
+      .items .charge {
+        width: 20%;
+      }
     </style>
     <!-- print style -->
     <style media="print">
@@ -185,17 +194,17 @@
       <table class="items">
         <tr>
           <th>Item</th>
-          <th>Time (h)</th>
+          <th>Time (hours)</th>
           <th>Price</th>
         </tr>
         {{#items}}
         <tr>
-          <td>
+          <td class="description">
             {{ title }} {{#url}}<a href="{{ url }}" target="_blank"> ⇗</a
             >{{/url}}
           </td>
-          <td>{{ time_h }}</td>
-          <td>{{ charge }}</td>
+          <td class="time_h">{{ time_h }}</td>
+          <td class="charge">{{ charge }}</td>
         </tr>
         {{/items}}
       </table>
