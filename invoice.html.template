@@ -20,15 +20,21 @@
     <header>
       <h1>INVOICE #{{ id }} - {{#upper}}{{ from.name }}{{/upper}}</h1>
       <span class="generated date">
-        generated <time>{{ issue_date }}</time>
-      </span>
-      <span class="due date">
-        due <time>{{ due_date }}</time>
+        sent {{#verboseDate}}{{ issue_date }}{{/verboseDate}} (<time>{{
+          issue_date
+        }}</time
+        >)
       </span>
       <span class="amount">
         <span class="currency">{{ currency }}</span>
         <span class="currency_symbol">{{ currency_symbol }}</span
         ><span class="value">{{ amount }}</span>
+      </span>
+      <span class="due date">
+        due by {{#verboseDate}}{{ due_date }}{{/verboseDate}} (<time>{{
+          due_date
+        }}</time
+        >)
       </span>
     </header>
     <main>
