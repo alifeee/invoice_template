@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Invoice {{ id }}</title>
 
+    <!-- fonts -->
+    <style>
+      @font-face {
+        font-family: "bboron";
+        src: url("../static/bboron.woff");
+      }
+    </style>
+    <!-- style -->
     <style>
       * {
         box-sizing: border-box;
