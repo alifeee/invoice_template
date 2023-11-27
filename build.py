@@ -77,7 +77,6 @@ def main():
     """Main"""
     template = load_template(TEMPLATE_PATH)
     invoice = load_toml(TOML_PATH)
-    print(invoice)
     invoice_id = invoice["id"]
     html = parse_template(template, invoice)
 
