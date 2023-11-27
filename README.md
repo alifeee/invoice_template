@@ -1,6 +1,8 @@
 # Invoice Template
 
-Template for making an invoice
+Template for making an invoice. Outputs HTML and PDF.
+
+![Screenshot of PDF invoice, filled in with example data.](images/invoice.png)
 
 ## Commands
 
