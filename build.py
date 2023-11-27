@@ -56,12 +56,17 @@ def save_html(html: str, output_path: str):
     # copy /static to build
     static_path = "static"
     if os.path.exists(static_path):
-        os.system(f"cp -r {static_path} {OUTPUT_FOLDER}")
+        # if windows
+        if os.name == "nt":
+            os.system(f"xcopy {static_path} {OUTPUT_FOLDER} /I /Y")
+        else:
+            os.system(f"cp -r {static_path} {OUTPUT_FOLDER}")
     print(f"🚀 Built html! The html is in {output_path}")
 
 
 def save_pdf(html_fpath: str, output_path: str):
-    """Make pdf from html"""
+    """Make pdf from html
+    HTML must already exist - provide the filepath"""
     print("🔧 Building pdf...")
     # open browser on html_file
     with sync_playwright() as p:
