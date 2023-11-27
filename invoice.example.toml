@@ -1,12 +1,38 @@
-[invoice]
+# this is an invoice
+
 id = "001"
-customer = "Garibaldi"
-amount = "£100"
+currency = "GBP"
+currency_symbol = "£"
+amount = "300"
 issue_date = "2023-11-30"
 due_date = "2023-12-30"
-description = "Snack generation"
+description = "Generation of Biscuits"
 
-[invoice.me]
+[from]
 name = "alifeee"
 address = "123 Fake Street, Sheffield, S8 4GF"
 email = "alifeee@alifeee.co.uk"
+
+[to]
+name = "Garibaldi"
+address = "123 Fake Street, Sheffield, S8 4GF"
+email = "old@biscuits.co.uk"
+
+
+[[items]]
+title = "Biscuit Generation"
+url = "https://www.github.com/alifeee/issues/4"
+time_h = "1.5"
+charge = "150"
+
+[[items]]
+title = "Biscuit Testing"
+url = "https://www.github.com/alifeee/issues/5"
+time_h = "1"
+charge = "100"
+
+[[items]]
+title = "Biscuit Packaging"
+url = "https://www.github.com/alifeee/issues/6"
+time_h = "0.5"
+charge = "50"
