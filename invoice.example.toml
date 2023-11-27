@@ -12,6 +12,7 @@ description = "Generation of Biscuits"
 name = "alifeee"
 address = "123 Fake Street, Sheffield, S8 4GF"
 email = "alifeee@alifeee.co.uk"
+bank = "alifeee 95-11-15 84958174"
 
 [to]
 name = "Garibaldi"
