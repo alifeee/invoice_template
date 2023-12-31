@@ -107,9 +107,10 @@
         text-align: left;
         font-size: 0.8em;
         color: #aaa;
+        padding-bottom: 0.5rem;
       }
       .items td {
-        padding: 0.5rem;
+        padding: 0.25rem;
       }
       .items .description {
         width: 60%;
@@ -119,6 +120,10 @@
       }
       .items .charge {
         width: 20%;
+      }
+      .items .total td {
+        font-weight: bold;
+        color: #aaa;
       }
     </style>
     <!-- print style -->
@@ -163,7 +168,7 @@
       </span>
       <span class="bank-reference">
         <span class="info">with reference</span>
-        <span class="reference">invoice_{{ id }}</span>
+        <span class="reference">invoice{{ id }}</span>
       </span>
     </header>
     <main>
@@ -192,7 +197,7 @@
       </table>
       <hr />
       <table class="items">
-        <tr>
+        <tr class="header">
           <th>Item</th>
           <th>Time (hours)</th>
           <th>Price ({{ currency_symbol }})</th>
@@ -207,6 +212,13 @@
           <td class="charge">{{ charge }}</td>
         </tr>
         {{/items}}
+        <tr class="total">
+          <td>Total</td>
+          <td></td>
+          <td>
+            {{ amount }}
+          </td>
+        </tr>
       </table>
     </main>
   </body>
