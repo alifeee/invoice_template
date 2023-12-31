@@ -83,10 +83,15 @@ def main():
     template = load_template(TEMPLATE_PATH)
     invoice = load_toml(TOML_PATH)
     invoice_id = invoice["id"]
+    invoice_from = "_".join(invoice["from"]["name"].split())
     html = parse_template(template, invoice)
 
-    html_output_path = os.path.join(OUTPUT_FOLDER, f"invoice_{invoice_id}.html")
-    pdf_output_path = os.path.join(OUTPUT_FOLDER, f"invoice_{invoice_id}.pdf")
+    html_output_path = os.path.join(
+        OUTPUT_FOLDER, f"INVOICE_{invoice_id}_{invoice_from}.html"
+    )
+    pdf_output_path = os.path.join(
+        OUTPUT_FOLDER, f"INVOICE_{invoice_id}_{invoice_from}.pdf"
+    )
 
     if not os.path.exists(OUTPUT_FOLDER):
         os.makedirs(OUTPUT_FOLDER)
