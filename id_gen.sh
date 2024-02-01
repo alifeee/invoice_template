@@ -5,7 +5,7 @@
 #  for example, "2024010101", which run through the hash becomes "3199"
 # the hash consists simply of two parts
 #  1. number of days since 2023-12-01
-#  2. 
+#  2. index
 # it therefore supports unique invoice numbers for
 #  1. any date after 2023-12-01
 #  2. up to 99 invoices per day
