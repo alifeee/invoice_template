@@ -35,7 +35,7 @@ def parse_template(template: str, data: dict) -> str:
         result = render(text)
         return result.upper()
 
-    def verboseDate(text, render):
+    def verbose_date(text, render):
         """Make a date into words
         i.e., "2023-11-30" -> Thu Nov 30, 2023
         """
@@ -44,7 +44,7 @@ def parse_template(template: str, data: dict) -> str:
         return date.strftime("%a %b %d, %Y")
 
     data["upper"] = upper
-    data["verboseDate"] = verboseDate
+    data["verbose_date"] = verbose_date
 
     return chevron.render(template, data)
 

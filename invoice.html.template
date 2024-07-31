@@ -146,7 +146,7 @@
     <header>
       <h1>INVOICE #{{ id }} - {{#upper}}{{ from.name }}{{/upper}}</h1>
       <span class="generated date">
-        sent {{#verboseDate}}{{ issue_date }}{{/verboseDate}} (<time>{{
+        sent {{#verbose_date}}{{ issue_date }}{{/verbose_date}} (<time>{{
           issue_date
         }}</time
         >)
@@ -157,7 +157,7 @@
         ><span class="value">{{ amount }}</span>
       </span>
       <span class="due date">
-        due by {{#verboseDate}}{{ due_date }}{{/verboseDate}} (<time>{{
+        due by {{#verbose_date}}{{ due_date }}{{/verbose_date}} (<time>{{
           due_date
         }}</time
         >)
