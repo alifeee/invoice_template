@@ -153,9 +153,9 @@
       </span>
       <span class="amount">
         <span class="currency">{{ currency }}</span>
-        <span class="currency_symbol">{{ currency_symbol }}</span>
-        <span class="value">
-          {{#format_thousands}}{{ amount }}{{/format_thousands}}
+        <span class="currency_symbol">{{ currency_symbol }}</span
+        ><span class="value"
+          >{{#format_thousands}}{{ amount }}{{/format_thousands}}
         </span>
       </span>
       <span class="due date">
