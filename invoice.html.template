@@ -115,7 +115,7 @@
       .items .description {
         width: 60%;
       }
-      .items .time_h {
+      .items .metric {
         width: 20%;
       }
       .items .charge {
@@ -199,7 +199,7 @@
       <table class="items">
         <tr class="header">
           <th>Item</th>
-          <th>Time (hours)</th>
+          <th>{{ metric_title }}</th>
           <th>Price ({{ currency_symbol }})</th>
         </tr>
         {{#items}}
@@ -208,7 +208,7 @@
             {{ title }} {{#url}}<a href="{{ url }}" target="_blank"> ⇗</a
             >{{/url}}
           </td>
-          <td class="time_h">{{ time_h }}</td>
+          <td class="metric">{{ metric }}</td>
           <td class="charge">{{ charge }}</td>
         </tr>
         {{/items}}

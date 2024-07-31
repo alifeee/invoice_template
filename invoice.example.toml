@@ -6,6 +6,7 @@ currency_symbol = "£"
 amount = "300"
 issue_date = "2023-11-30"
 due_date = "2023-12-30"
+metric_title = "Time (hours)"
 
 [from]
 name = "alifeee"
@@ -22,16 +23,16 @@ email = "old@biscuits.co.uk"
 [[items]]
 title = "Biscuit Generation"
 url = "https://www.github.com/alifeee/issues/4"
-time_h = "1.5"
+metric = "1.5"
 charge = "150"
 
 [[items]]
 title = "Biscuit Testing"
-time_h = "1"
+metric = "1"
 charge = "100"
 
 [[items]]
 title = "Biscuit Packaging"
 url = "https://www.github.com/alifeee/issues/6"
-time_h = "0.5"
+metric = "0.5"
 charge = "50"
