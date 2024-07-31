@@ -153,8 +153,10 @@
       </span>
       <span class="amount">
         <span class="currency">{{ currency }}</span>
-        <span class="currency_symbol">{{ currency_symbol }}</span
-        ><span class="value">{{ amount }}</span>
+        <span class="currency_symbol">{{ currency_symbol }}</span>
+        <span class="value">
+          {{#format_thousands}}{{ amount }}{{/format_thousands}}
+        </span>
       </span>
       <span class="due date">
         due by {{#verbose_date}}{{ due_date }}{{/verbose_date}} (<time>{{
@@ -209,15 +211,15 @@
             >{{/url}}
           </td>
           <td class="metric">{{ metric }}</td>
-          <td class="charge">{{ charge }}</td>
+          <td class="charge">
+            {{#format_thousands}}{{ charge }}{{/format_thousands}}
+          </td>
         </tr>
         {{/items}}
         <tr class="total">
           <td>Total</td>
           <td></td>
-          <td>
-            {{ amount }}
-          </td>
+          <td>{{#format_thousands}}{{ amount }}{{/format_thousands}}</td>
         </tr>
       </table>
     </main>

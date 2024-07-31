@@ -43,8 +43,18 @@ def parse_template(template: str, data: dict) -> str:
         date = datetime.datetime.strptime(result, "%Y-%m-%d")
         return date.strftime("%a %b %d, %Y")
 
+    def format_thousands(text, render):
+        """comma-format a long number, i.e., turn 2120 into 2,120"""
+        result = render(text)
+        try:
+            result = int(result)
+        except ValueError:
+            return result
+        return f"{result:,}"
+
     data["upper"] = upper
     data["verbose_date"] = verbose_date
+    data["format_thousands"] = format_thousands
 
     return chevron.render(template, data)
 
