@@ -56,6 +56,21 @@ def parse_template(template: str, data: dict) -> str:
     data["verbose_date"] = verbose_date
     data["format_thousands"] = format_thousands
 
+    # compute actual total from items
+    total = 0
+    for item in data.get("items", []):
+        total += float(item.get("charge", 0))
+    total = round(total, 2)
+    data["total"] = total
+
+    if total != round(float(data.get("amount", 0)), 2):
+        raise ValueError(
+            "total doesn't sum to item sum total \n"
+            f"submitted total: {data.get('amount', 0)} \n"
+            f"actual total: {total} \n"
+            f"difference: {round(float(data.get('amount', 0)) - total, 2)}"
+        )
+
     return chevron.render(template, data)
 
 

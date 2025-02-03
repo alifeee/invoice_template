@@ -219,7 +219,7 @@
         <tr class="total">
           <td>Total</td>
           <td></td>
-          <td>{{#format_thousands}}{{ amount }}{{/format_thousands}}</td>
+          <td>{{#format_thousands}}{{ total }}{{/format_thousands}}</td>
         </tr>
       </table>
     </main>
