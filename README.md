@@ -1,3 +1,5 @@
+> [!CAUTION]
+> MOVED! see <https://git.alifeee.net/invoice_template/about/>
 # Invoice Template
 
 Template for making an invoice. Outputs HTML and PDF. Uses TOML for information, e.g.,
